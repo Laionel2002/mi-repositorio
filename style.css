@@ -1,0 +1,138 @@
+
+/* eSTILOS DE RESET CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: black;
+    border: 1px red solid;
+}
+
+
+/* MAIN */
+
+
+
+/* ESTILOS HEADER / NAV */
+
+#header{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+}
+
+#navbarSupportedContent ul{
+    width: 100%;
+    justify-content: center;
+}
+
+/* MAIN INICIO*/
+
+
+.fondo-inicio{
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.foto-fondo{
+    height: 10%
+;
+}
+
+
+
+.destacado{
+    width: 100%;
+    text-align: center;
+}
+
+.destacado-imagenes{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 5px;
+}
+
+.destacado-imagenes img{
+    width: 100%;
+    height: 100%;
+}
+
+.titulo-coleccion{
+    text-align: center;
+}
+
+.en-tendencia-inicio{
+    width: 100%;
+    height: 100%;
+}
+
+.botones-tendencia{
+    display: grid;
+    width: 100%;
+    height: 30px;
+    grid-template-columns: repeat(5, 411px);
+    column-gap: 5px;
+    margin-top: 10px;
+}
+
+.img-tendencia{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 5px;
+}
+
+
+
+
+/* FOOTER INICIO */
+
+#footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: space-around;
+}
+
+.footer-links ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.footer-links ul a{
+    margin-left: 5px;
+}
+
+.foto{
+    display: flex;
+    width: 60px;
+    height: 60px;
+}
+
+.footer-redes{
+    width: 10%;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
