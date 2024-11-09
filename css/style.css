@@ -25,6 +25,16 @@
   position: fixed;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 #navbarSupportedContent ul {
   width: 100%;
   justify-content: center;
