@@ -1,0 +1,84 @@
+@media (max-width: 992px) {
+    /* Ajustar la grilla de dos columnas en la sección de contacto */
+    .container-contacto {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+
+    /* Ajustar padding y tamaños de texto para el footer */
+    .footer {
+        padding: 15px 30px;
+    }
+
+    .footer .menu-icon {
+        font-size: 18px;
+    }
+
+    /* Reducir el tamaño del título y la descripción */
+    .box-info h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .box-info p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Centrar el contenido de .box-info */
+    .box-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Ajustar el tamaño de los íconos y los enlaces sociales */
+    .links a {
+        width: 30px;
+        height: 30px;
+    }
+    .links a i {
+        font-size: 16px;
+    }
+
+    /* Ajustar el tamaño de los botones y campos de entrada */
+    .input-box input, .input-box textarea {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar el padding del footer */
+    .footer {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    /* Ajustar el tamaño de la fuente y alineación de los títulos */
+    .box-info h1 {
+        font-size: 20px;
+    }
+
+    /* Alinear el texto en el formulario */
+    .form {
+        padding: 10px;
+    }
+
+    /* Ajustar tamaño de los íconos y el espaciado en el footer */
+    .social-icon .icon {
+        font-size: 24px;
+    }
+
+    /* Reducir el tamaño de los textos en el footer */
+    .footer .menu-icon, .footer .text {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-contacto {
+        padding: 40px;
+    }
+
+    .footer {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
