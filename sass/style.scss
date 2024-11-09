@@ -151,6 +151,15 @@
 
 /* MAIN ACERCA DE */
 
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(/images/fondos/debb0883c5bfcb992808eea826d3bbcc.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .container{
     margin: auto;
 }
@@ -164,45 +173,231 @@
 .section-1-title{
     font-family: "roboto", sans-serif;
     font-size: 40px;
-    color: black;
+    color:crimson;
     font-weight: bold;
+    margin: 25px 0;
 }
 
-.us{
+.us {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.us-text {
+    width: 55%;
+    padding: 0 20px;
+}
+
+.us-paragraph {
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    text-align: justify;
+}
+
+.paragraph-text {
+    margin: 10px 0;
+    color: #e6dcd6;
+}
+
+.us-rs {
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.us-rs-title {
+    font-family: "roboto", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: crimson;
+}
+
+.rs-icon {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.rs-link {
+    margin: 0 10px;
+}
+
+.us-img {
+    width: 40%;
+    text-align: right;
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center;
+    background-color: #f9f9f9; /* Color de fondo para distinguir la imagen */
+    border-radius: 5px;
+    padding: 10px; /* Espacio alrededor de la imagen */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar la imagen */
+}
+
+.img-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; /* La imagen ocupará todo el alto del contenedor .us-img */
+    border-radius: 5px;
     
 }
+/* MAIN CONTACTO */
 
-.us-text{
+.main-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(/images/fondos/debb0883c5bfcb992808eea826d3bbcc.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-contacto{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    padding: 20px;
+    gap: 10px;
+    width: 1000px;
+}
+
+.box-info{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.box-info h1{
+    text-align: left;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #fff;
+}
+
+.data p{
+    font-size: 1rem;
+    color: #fff;
+}
+
+.data p i{
+    color: crimson;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.links{
+    display: flex;
+    gap: 15px;
+}
+
+.links a{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    background: crimson;
+    text-align: center;
+    transition: .1s;
+}
+
+.links a i{
+    color: #fff;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.input-box{
+    position: relative;
+}
+
+.input-box input{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    background: rgba(255 255 255 / .1);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.input-box textarea{
+    width: 100%;
+    height: 130px;
+    background: rgba(255 255 255 / .1);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    transition: .3s;
+    color: #fff;
+}
+
+.input-box input:focus, .input-box textarea:focus{
+    border-bottom: 3px solid crimson;
+}
+
+.input-box input::placeholder, .input-box textarea::placeholder{
+    color: #a3a3a3;
+}
+
+.input-box input:focus::placeholder, .input-box textarea:focus::placeholder{
+    color: transparent;
+}
+
+.input-box textarea{
+    width: 100%;
+    height: 130px;
+    background: rgba(255 255 255 / .1);
+    border: 3px solid transparent;
+    letter-spacing:  1px;
+    transition: .3s;
+    color: #fff;
+    padding: 10px;
+    outline: none;
+}
+
+.input-box i{
+    color: rgba(255 255 255 / .3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.input-box input:focus ~ i{
+    color: crimson;
+}
+
+.form button{
+    background-color: crimson;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    transition: .2s;
+}
+
+.form button:hover, .links a:hover{
+    background: rgb(136, 13, 38);
 
 }
 
-.us-paragraph{
-
-}
-
-.paragraph-text{
-
-}
-
-.us-rs{
-
-}
-
-.us-rs-title{
-
-}
-
-.rs-icon{
-
-}
-
-.rs-link{
-
-}
-
-.img-img{
-
-}
 
 /* MAIN HOMBRE*/
 
