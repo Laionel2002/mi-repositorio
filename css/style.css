@@ -462,7 +462,7 @@ main.main-contacto {
   width: 100%;
   background: #212529;
   min-height: 100px;
-  padding: 20px 50px;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
