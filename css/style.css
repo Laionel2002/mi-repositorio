@@ -596,8 +596,7 @@ main.main-contacto {
     padding: 40px;
   }
   .footer {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
   }
 }
 
