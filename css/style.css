@@ -587,32 +587,28 @@ main.main-contacto {
   font-size: 20px;
 }
 
-/* Media queries para móviles */
-@media (max-width: 992px) {
-  .footer {
-    padding: 15px 30px;
-  }
-  .footer .menu-icon {
-    font-size: 18px;
-  }
+/* Estilo para los iconos del menú, con transición */
+.menu-icon {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
 }
-@media (max-width: 767px) {
-  .footer {
-    padding: 10px 20px;
-  }
-  .menu {
-    background-color: #212529; /* Fondo oscuro para el menú en móvil */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10; /* Menú por encima del contenido */
-  }
-  .menu-icon {
-    font-size: 18px;
-    color: white; /* Letras blancas */
-  }
+
+/* Color crimson al pasar el mouse */
+.menu-icon:hover {
+  opacity: 1;
+  color: crimson; /* Cambia el color al pasar el mouse */
 }
+
+/* Color crimson para el elemento seleccionado */
+.menu-icon.selected {
+  color: crimson; /* Cambia el color al estar seleccionado */
+}
+
 /* Estilos generales (para pantallas grandes) */
 body {
   font-family: Arial, sans-serif;
