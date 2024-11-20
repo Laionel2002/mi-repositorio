@@ -1,147 +1,174 @@
-/* Estilos generales (para pantallas grandes) */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Estilos generales del footer */
+.footer {
+    position: relative;
+    width: 100%;
+    background: #212529;
+    min-height: 100px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
 }
 
-/* Móviles pequeños - hasta 480px (Dispositivos móviles como iPhone SE) */
+/* Iconos sociales */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+/* Menú del footer */
+.menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+
+.menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+    color: crimson;  /* Color crimson en hover */
+}
+
+/* Texto */
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Media Queries para dispositivos pequeños */
+
 @media (max-width: 480px) {
-    .navbar {
-        font-size: 14px; /* Menor tamaño de texto */
+    .footer {
+        padding: 15px 10px;  /* Reducir padding en pantallas muy pequeñas */
     }
 
-    .navbar-brand {
-        font-size: 16px;
+    .social-icon {
+        margin: 5px 0;
     }
 
-    .navbar-nav .nav-link {
-        font-size: 14px;
+    .icon {
+        font-size: 24px;  /* Reducir tamaño de los iconos */
+        margin: 0 5px;
     }
 
-    .foto-fondo {
-        width: 100%;
-        height: auto;
+    .menu {
+        flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
     }
 
-    .titulo-coleccion {
-        font-size: 1.5rem;
-        text-align: center;
+    .menu-icon {
+        font-size: 16px; /* Reducir tamaño de texto en el menú */
+        margin: 10px 0;
     }
 
-    /* Menú de navegación */
-    .navbar-collapse {
-        padding: 10px;
-    }
-
-    /* Secciones de la página */
-    .seccion-destacados {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-    }
-
-    .categoria button {
-        font-size: 12px;
+    .text {
+        font-size: 16px; /* Reducir tamaño del texto */
     }
 }
 
 /* Móviles medianos y tabletas - hasta 768px */
 @media (max-width: 768px) {
-    .navbar {
-        font-size: 16px; /* Ajuste de tamaño de fuente */
+    .footer {
+        padding: 15px 20px;
     }
 
-    .navbar-nav .nav-link {
-        font-size: 16px;
+    .social-icon {
+        margin: 5px;
     }
 
-    .titulo-coleccion {
-        font-size: 1.75rem;
-        text-align: center;
+    .icon {
+        font-size: 28px; /* Ajustar el tamaño de los iconos */
     }
 
-    .foto-fondo {
-        width: 100%;
-        height: auto;
+    .menu {
+        flex-direction: column; /* Apilar los elementos */
+        margin-top: 15px;
     }
 
-    .seccion-destacados {
-        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más grandes, como tabletas */
+    .menu-icon {
+        font-size: 18px;  /* Ajuste de tamaño de texto */
+        margin: 10px 0;
     }
 
-    /* Botones de categoría */
-    .categoria button {
-        font-size: 14px;
+    .text {
+        font-size: 18px;  /* Ajuste de tamaño de texto */
     }
 }
 
 /* Tabletas grandes y pantallas pequeñas de escritorio - hasta 1024px */
 @media (max-width: 1024px) {
-    .navbar {
-        font-size: 18px;
+    .footer {
+        padding: 20px 30px;
     }
 
-    .navbar-nav .nav-link {
-        font-size: 16px;
+    .menu {
+        flex-direction: row;
     }
 
-    .foto-fondo {
-        width: 100%;
-        height: auto;
+    .menu-icon {
+        font-size: 18px;  /* Ajustar tamaño de texto */
     }
 
-    /* Tres columnas en la sección de destacados */
-    .seccion-destacados {
-        grid-template-columns: 1fr 1fr 1fr; 
-    }
-
-    .categoria button {
-        font-size: 16px;
+    .text {
+        font-size: 20px;  /* Ajuste de tamaño de texto */
     }
 }
 
-/* Escritorios y pantallas grandes (más de 1024px) */
+/* Pantallas grandes de escritorio (más de 1024px) */
 @media (min-width: 1025px) {
-    .navbar {
-        font-size: 20px;
+    .footer {
+        padding: 20px 50px;
     }
 
-    .navbar-nav .nav-link {
-        font-size: 18px;
+    .menu {
+        flex-direction: row;
     }
 
-    .foto-fondo {
-        width: 100%;
-        height: auto;
+    .menu-icon {
+        font-size: 20px;  /* Tamaño de texto para escritorios */
     }
 
-    .seccion-destacados {
-        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas para escritorios */
-    }
-
-    .categoria button {
-        font-size: 18px;
-    }
-}
-
-/* Para pantallas grandes de escritorio (de 1440px en adelante) */
-@media (min-width: 1440px) {
-    .navbar {
-        font-size: 22px;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 20px;
-    }
-
-    .foto-fondo {
-        width: 100%;
-        height: 100vh; /* Fondo que cubra toda la pantalla */
-    }
-
-    .seccion-destacados {
-        grid-template-columns: repeat(5, 1fr); /* 5 columnas en pantallas muy grandes */
-    }
-
-    .categoria button {
-        font-size: 20px;
+    .text {
+        font-size: 22px;  /* Ajuste del tamaño del texto */
     }
 }
