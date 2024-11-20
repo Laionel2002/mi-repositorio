@@ -10,9 +10,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    }
+    z-index: 2; /* Asegura que el footer esté por encima en dispositivos móviles */
+}
 
-
+/* Estilo para los iconos sociales */
 .social-icon {
     display: flex;
     justify-content: center;
@@ -20,13 +21,11 @@
     position: relative;
     margin: 10px 5px;
     flex-wrap: wrap;
-    }
-
+}
 
 .icon-elem {
     list-style: none;
-    }
-
+}
 
 .icon {
     color: white;
@@ -34,13 +33,11 @@
     display: inline-block;
     margin: 0 10px;
     transition: 0.5s;
-    }
-
+}
 
 .icon:hover {
     transform: translateY(-10px);
-    }
-
+}
 
 .menu {
     display: flex;
@@ -49,12 +46,13 @@
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
-    }
-
+}
 
 .menu-elem {
     list-style: none;
-    }
+}
+
+/* Estilo para el menú, colores y transición */
 .menu-icon {
     color: white;
     font-size: 20px;
@@ -63,11 +61,11 @@
     margin: 5px 10px;
     opacity: 0.5;
     transition: 0.3s;
-    }
+}
 
 .menu-icon:hover {
     opacity: 1;
-    }
+}
 
 .text {
     color: white;
@@ -75,4 +73,34 @@
     margin-top: 15px;
     margin-bottom: 10px;
     font-size: 20px;
+}
+
+/* Media queries para móviles */
+@media (max-width: 992px) {
+    .footer {
+        padding: 15px 30px;
     }
+
+    .footer .menu-icon {
+        font-size: 18px;
+    }
+}
+@media (max-width: 767px) {
+    .footer {
+        padding: 10px 20px;
+    }
+
+    .menu {
+        background-color: #212529; /* Fondo oscuro para el menú en móvil */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10; /* Menú por encima del contenido */
+    }
+
+    .menu-icon {
+        font-size: 18px;
+        color: white; /* Letras blancas */
+    }
+}

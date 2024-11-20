@@ -1,6 +1,5 @@
 /* MAIN INICIO*/
 
-
 .fondo-inicio{
     max-width: 100%;
     height: auto;
@@ -112,6 +111,42 @@
     border-radius: 10px 10px 0px 0px;
     cursor: pointer;
 }
+
+.h1-inicio {
+    font-family: "roboto", sans-serif; /* Mantén la misma tipografía */
+    font-size: 40px; /* Ajusta el tamaño según lo que necesites */
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
+    background-color: #000; /* Fondo en color crimson */
+    color: white; /* Color de texto blanco para contrastar con el fondo */
+    padding: 20px; /* Añade espacio alrededor del texto */
+    margin: 0; /* Elimina márgenes por defecto */
+    position: relative; /* Para agregar un efecto extra como sombra o borde */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    text-transform: uppercase; /* Da un toque más elegante al texto */
+    letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+}
+
+.h1-inicio::before {
+    content: ''; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; 
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Sombra tenue */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); /* Sombra para dar brillo */
+    z-index: -1; /* Pone la sombra detrás del texto */
+}
+
+.h1-inicio:hover {
+    background-color: #dc3545; /* Cambia el color de fondo al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+    transform: scale(1.05); /* Efecto de zoom suave al hacer hover */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
 
 /* MAIN ACERCA DE */
 

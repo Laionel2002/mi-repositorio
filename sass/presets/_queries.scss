@@ -1,83 +1,147 @@
-@media (max-width: 992px) {
-    /* Ajustar la grilla de dos columnas en la sección de contacto */
-    .container-contacto {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-    }
-
-    /* Ajustar padding y tamaños de texto para el footer */
-    .footer {
-        padding: 15px 30px;
-    }
-
-    .footer .menu-icon {
-        font-size: 18px;
-    }
-
-    /* Reducir el tamaño del título y la descripción */
-    .box-info h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-    .box-info p {
-        font-size: 1rem;
-    }
+/* Estilos generales (para pantallas grandes) */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-@media (max-width: 767px) {
-    /* Centrar el contenido de .box-info */
-    .box-info {
-        align-items: center;
-        text-align: center;
+/* Móviles pequeños - hasta 480px (Dispositivos móviles como iPhone SE) */
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 14px; /* Menor tamaño de texto */
     }
 
-    /* Ajustar el tamaño de los íconos y los enlaces sociales */
-    .links a {
-        width: 30px;
-        height: 30px;
-    }
-    .links a i {
+    .navbar-brand {
         font-size: 16px;
     }
 
-    /* Ajustar el tamaño de los botones y campos de entrada */
-    .input-box input, .input-box textarea {
-        font-size: 0.9rem;
+    .navbar-nav .nav-link {
+        font-size: 14px;
     }
 
-    /* Ajustar el padding del footer */
-    .footer {
-        padding: 10px 20px;
-    }
-}
-
-@media (max-width: 575px) {
-    /* Ajustar el tamaño de la fuente y alineación de los títulos */
-    .box-info h1 {
-        font-size: 20px;
+    .foto-fondo {
+        width: 100%;
+        height: auto;
     }
 
-    /* Alinear el texto en el formulario */
-    .form {
+    .titulo-coleccion {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* Menú de navegación */
+    .navbar-collapse {
         padding: 10px;
     }
 
-    /* Ajustar tamaño de los íconos y el espaciado en el footer */
-    .social-icon .icon {
-        font-size: 24px;
+    /* Secciones de la página */
+    .seccion-destacados {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
     }
 
-    /* Reducir el tamaño de los textos en el footer */
-    .footer .menu-icon, .footer .text {
+    .categoria button {
+        font-size: 12px;
+    }
+}
+
+/* Móviles medianos y tabletas - hasta 768px */
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 16px; /* Ajuste de tamaño de fuente */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .titulo-coleccion {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .foto-fondo {
+        width: 100%;
+        height: auto;
+    }
+
+    .seccion-destacados {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más grandes, como tabletas */
+    }
+
+    /* Botones de categoría */
+    .categoria button {
+        font-size: 14px;
+    }
+}
+
+/* Tabletas grandes y pantallas pequeñas de escritorio - hasta 1024px */
+@media (max-width: 1024px) {
+    .navbar {
+        font-size: 18px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .foto-fondo {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Tres columnas en la sección de destacados */
+    .seccion-destacados {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    .categoria button {
         font-size: 16px;
     }
 }
 
-@media (min-width: 1200px) {
-    .container-contacto {
-        padding: 40px;
+/* Escritorios y pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    .navbar {
+        font-size: 20px;
     }
 
-    .footer {
-        max-width: 100%;
+    .navbar-nav .nav-link {
+        font-size: 18px;
+    }
+
+    .foto-fondo {
+        width: 100%;
+        height: auto;
+    }
+
+    .seccion-destacados {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas para escritorios */
+    }
+
+    .categoria button {
+        font-size: 18px;
+    }
+}
+
+/* Para pantallas grandes de escritorio (de 1440px en adelante) */
+@media (min-width: 1440px) {
+    .navbar {
+        font-size: 22px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 20px;
+    }
+
+    .foto-fondo {
+        width: 100%;
+        height: 100vh; /* Fondo que cubra toda la pantalla */
+    }
+
+    .seccion-destacados {
+        grid-template-columns: repeat(5, 1fr); /* 5 columnas en pantallas muy grandes */
+    }
+
+    .categoria button {
+        font-size: 20px;
     }
 }

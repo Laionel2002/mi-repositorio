@@ -9,13 +9,14 @@
   color: black;
 }
 
-/* ESTILOS HEADER / NAV */
+/* HEADER INICIO */
 #header {
   max-width: 1800px;
   height: 80px;
   background-color: #212529;
 }
-#header .navbar {
+
+.navbar {
   width: 100%;
   height: 80px;
   display: flex;
@@ -23,21 +24,40 @@
   align-items: center;
   background-color: #212529;
   position: fixed;
+  z-index: 9999; /* Asegura que el menú se superponga */
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
-
+/* Asegura que los enlaces dentro del menú estén alineados */
 #navbarSupportedContent ul {
   width: 100%;
   justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    background-color: #212529; /* Menú hamburguesa con fondo oscuro */
+    z-index: 10;
+  }
+}
+/* Estilo para el fondo del menú desplegable */
+.navbar-dark .navbar-collapse {
+  background-color: #212529; /* Fondo oscuro similar al del menú principal */
+}
+
+/* Estilo para los enlaces dentro del menú desplegable */
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff; /* Letras blancas para un contraste adecuado */
+}
+
+/* Estilo para cuando el enlace es hover o activo */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: crimson; /* Color de texto al hacer hover o que está activo */
+}
+
+/* Cambiar el color del icono del menú hamburguesa */
+.navbar-dark .navbar-toggler-icon {
+  background-color: white; /* Cambiar el color del icono a blanco para visibilidad */
 }
 
 /* MAIN INICIO*/
@@ -147,6 +167,41 @@ main {
   padding: 15px 15px;
   border-radius: 10px 10px 0px 0px;
   cursor: pointer;
+}
+
+.h1-inicio {
+  font-family: "roboto", sans-serif; /* Mantén la misma tipografía */
+  font-size: 40px; /* Ajusta el tamaño según lo que necesites */
+  font-weight: bold;
+  text-align: center; /* Centra el texto */
+  background-color: #000; /* Fondo en color crimson */
+  color: white; /* Color de texto blanco para contrastar con el fondo */
+  padding: 20px; /* Añade espacio alrededor del texto */
+  margin: 0; /* Elimina márgenes por defecto */
+  position: relative; /* Para agregar un efecto extra como sombra o borde */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+  text-transform: uppercase; /* Da un toque más elegante al texto */
+  letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+}
+
+.h1-inicio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Sombra tenue */
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); /* Sombra para dar brillo */
+  z-index: -1; /* Pone la sombra detrás del texto */
+}
+
+.h1-inicio:hover {
+  background-color: #dc3545; /* Cambia el color de fondo al pasar el ratón */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+  transform: scale(1.05); /* Efecto de zoom suave al hacer hover */
+  transition: all 0.3s ease-in-out; /* Transición suave */
 }
 
 /* MAIN ACERCA DE */
@@ -467,8 +522,10 @@ main.main-contacto {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 2; /* Asegura que el footer esté por encima en dispositivos móviles */
 }
 
+/* Estilo para los iconos sociales */
 .social-icon {
   display: flex;
   justify-content: center;
@@ -507,6 +564,7 @@ main.main-contacto {
   list-style: none;
 }
 
+/* Estilo para el menú, colores y transición */
 .menu-icon {
   color: white;
   font-size: 20px;
@@ -529,74 +587,149 @@ main.main-contacto {
   font-size: 20px;
 }
 
+/* Media queries para móviles */
 @media (max-width: 992px) {
-  /* Ajustar la grilla de dos columnas en la sección de contacto */
-  .container-contacto {
-    grid-template-columns: 1fr; /* Cambia a una sola columna */
-  }
-  /* Ajustar padding y tamaños de texto para el footer */
   .footer {
     padding: 15px 30px;
   }
   .footer .menu-icon {
     font-size: 18px;
   }
-  /* Reducir el tamaño del título y la descripción */
-  .box-info h1 {
-    font-size: 24px;
-    text-align: center;
-  }
-  .box-info p {
-    font-size: 1rem;
-  }
 }
 @media (max-width: 767px) {
-  /* Centrar el contenido de .box-info */
-  .box-info {
-    align-items: center;
-    text-align: center;
-  }
-  /* Ajustar el tamaño de los íconos y los enlaces sociales */
-  .links a {
-    width: 30px;
-    height: 30px;
-  }
-  .links a i {
-    font-size: 16px;
-  }
-  /* Ajustar el tamaño de los botones y campos de entrada */
-  .input-box input, .input-box textarea {
-    font-size: 0.9rem;
-  }
-  /* Ajustar el padding del footer */
   .footer {
     padding: 10px 20px;
   }
-}
-@media (max-width: 575px) {
-  /* Ajustar el tamaño de la fuente y alineación de los títulos */
-  .box-info h1 {
-    font-size: 20px;
+  .menu {
+    background-color: #212529; /* Fondo oscuro para el menú en móvil */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Menú por encima del contenido */
   }
-  /* Alinear el texto en el formulario */
-  .form {
+  .menu-icon {
+    font-size: 18px;
+    color: white; /* Letras blancas */
+  }
+}
+/* Estilos generales (para pantallas grandes) */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Móviles pequeños - hasta 480px (Dispositivos móviles como iPhone SE) */
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 14px; /* Menor tamaño de texto */
+  }
+  .navbar-brand {
+    font-size: 16px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+  .foto-fondo {
+    width: 100%;
+    height: auto;
+  }
+  .titulo-coleccion {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  /* Menú de navegación */
+  .navbar-collapse {
     padding: 10px;
   }
-  /* Ajustar tamaño de los íconos y el espaciado en el footer */
-  .social-icon .icon {
-    font-size: 24px;
+  /* Secciones de la página */
+  .seccion-destacados {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
   }
-  /* Reducir el tamaño de los textos en el footer */
-  .footer .menu-icon, .footer .text {
+  .categoria button {
+    font-size: 12px;
+  }
+}
+/* Móviles medianos y tabletas - hasta 768px */
+@media (max-width: 768px) {
+  .navbar {
+    font-size: 16px; /* Ajuste de tamaño de fuente */
+  }
+  .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+  .titulo-coleccion {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .foto-fondo {
+    width: 100%;
+    height: auto;
+  }
+  .seccion-destacados {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más grandes, como tabletas */
+  }
+  /* Botones de categoría */
+  .categoria button {
+    font-size: 14px;
+  }
+}
+/* Tabletas grandes y pantallas pequeñas de escritorio - hasta 1024px */
+@media (max-width: 1024px) {
+  .navbar {
+    font-size: 18px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+  .foto-fondo {
+    width: 100%;
+    height: auto;
+  }
+  /* Tres columnas en la sección de destacados */
+  .seccion-destacados {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .categoria button {
     font-size: 16px;
   }
 }
-@media (min-width: 1200px) {
-  .container-contacto {
-    padding: 40px;
+/* Escritorios y pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+  .navbar {
+    font-size: 20px;
   }
-  .footer {
-    max-width: 100%;
+  .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+  .foto-fondo {
+    width: 100%;
+    height: auto;
+  }
+  .seccion-destacados {
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas para escritorios */
+  }
+  .categoria button {
+    font-size: 18px;
+  }
+}
+/* Para pantallas grandes de escritorio (de 1440px en adelante) */
+@media (min-width: 1440px) {
+  .navbar {
+    font-size: 22px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 20px;
+  }
+  .foto-fondo {
+    width: 100%;
+    height: 100vh; /* Fondo que cubra toda la pantalla */
+  }
+  .seccion-destacados {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas en pantallas muy grandes */
+  }
+  .categoria button {
+    font-size: 20px;
   }
 }
 
