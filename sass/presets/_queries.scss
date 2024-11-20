@@ -1,174 +1,71 @@
-/* Estilos generales del footer */
-.footer {
-    position: relative;
-    width: 100%;
-    background: #212529;
-    min-height: 100px;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 2;
+/* Diseño de productos: Columna en pantallas grandes y pequeñas */
+.productos .producto {
+    margin-bottom: 30px;
 }
 
-/* Iconos sociales */
-.social-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 10px 5px;
-    flex-wrap: wrap;
-}
-
-.icon-elem {
-    list-style: none;
-}
-
-.icon {
-    color: white;
-    font-size: 32px;
-    display: inline-block;
-    margin: 0 10px;
-    transition: 0.5s;
-}
-
-.icon:hover {
-    transform: translateY(-10px);
-}
-
-/* Menú del footer */
-.menu {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-}
-
-.menu-elem {
-    list-style: none;
-}
-
-.menu-icon {
-    color: white;
-    font-size: 20px;
-    display: inline-block;
-    text-decoration: none;
-    margin: 5px 10px;
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-.menu-icon:hover {
-    opacity: 1;
-    color: crimson;  /* Color crimson en hover */
-}
-
-/* Texto */
-.text {
-    color: white;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-/* Media Queries para dispositivos pequeños */
-
-@media (max-width: 480px) {
-    .footer {
-        padding: 15px 10px;  /* Reducir padding en pantallas muy pequeñas */
-    }
-
-    .social-icon {
-        margin: 5px 0;
-    }
-
-    .icon {
-        font-size: 24px;  /* Reducir tamaño de los iconos */
-        margin: 0 5px;
-    }
-
-    .menu {
-        flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
-    }
-
-    .menu-icon {
-        font-size: 16px; /* Reducir tamaño de texto en el menú */
-        margin: 10px 0;
-    }
-
-    .text {
-        font-size: 16px; /* Reducir tamaño del texto */
-    }
-}
-
-/* Móviles medianos y tabletas - hasta 768px */
 @media (max-width: 768px) {
-    .footer {
-        padding: 15px 20px;
+    .producto {
+        text-align: center;
     }
 
-    .social-icon {
-        margin: 5px;
+    .info-producto h2 {
+        font-size: 1.2rem;
     }
 
-    .icon {
-        font-size: 28px; /* Ajustar el tamaño de los iconos */
-    }
-
-    .menu {
-        flex-direction: column; /* Apilar los elementos */
-        margin-top: 15px;
-    }
-
-    .menu-icon {
-        font-size: 18px;  /* Ajuste de tamaño de texto */
-        margin: 10px 0;
-    }
-
-    .text {
-        font-size: 18px;  /* Ajuste de tamaño de texto */
+    .precio {
+        font-size: 1rem;
     }
 }
 
-/* Tabletas grandes y pantallas pequeñas de escritorio - hasta 1024px */
-@media (max-width: 1024px) {
-    .footer {
-        padding: 20px 30px;
+@media (max-width: 576px) {
+    .navbar-collapse {
+        text-align: center;
     }
 
-    .menu {
-        flex-direction: row;
-    }
-
-    .menu-icon {
-        font-size: 18px;  /* Ajustar tamaño de texto */
-    }
-
-    .text {
-        font-size: 20px;  /* Ajuste de tamaño de texto */
+    .navbar-nav {
+        padding-top: 10px;
     }
 }
 
-/* Pantallas grandes de escritorio (más de 1024px) */
-@media (min-width: 1025px) {
-    .footer {
-        padding: 20px 50px;
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.5rem;
     }
 
-    .menu {
-        flex-direction: row;
+    .navbar-nav {
+        margin-top: 10px;
     }
 
-    .menu-icon {
-        font-size: 20px;  /* Tamaño de texto para escritorios */
+    .navbar-toggler {
+        margin-top: 10px;
     }
+}
 
-    .text {
-        font-size: 22px;  /* Ajuste del tamaño del texto */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto {
+    flex: 1 1 calc(33.333% - 20px); /* tres productos por fila */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .producto {
+        flex: 1 1 calc(50% - 20px); /* dos productos por fila */
+    }
+}
+
+@media (max-width: 576px) {
+    .producto {
+        flex: 1 1 100%; /* un producto por fila */
     }
 }
